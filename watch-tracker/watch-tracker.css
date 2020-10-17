@@ -1,0 +1,48 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  font-size: 1.2rem;
+  /*border: 2px solid pink;*/
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  animation: blink 1s infinite;
+  padding: 2px;
+  /*border: 2px solid green;  */
+}
+
+#frequency {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  /*border: 2px solid coral;*/
+  /*width: 50px;*/
+}
+
+#bpm {
+  padding: 2px;  
+  flex: 1;
+  
+}
+
+#calories {
+  text-align: end;
+  /*border: 2px solid coral;*/
+  flex: 1;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}

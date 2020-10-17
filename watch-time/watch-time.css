@@ -1,0 +1,23 @@
+
+section {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #fafafa;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding: 0;
+  
+ /* border: 2px solid yellow;*/
+}
+
+@keyframes blink {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.1;
+          }
+        }

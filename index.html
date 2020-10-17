@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main-styles.css">           
+</head>
+<body>
+  <watch-screen>
+    <watch-date></watch-date>
+    <watch-time></watch-time>
+    <watch-tracker></watch-tracker>
+  </watch-screen>
+  
+
+  <template id="watch-date">    
+      <p>DAY 20 MONTH 2020</p>    
+
+    <!-- CSS file-->
+    <link rel="stylesheet" href="watch-date/watch-date.css">      
+  </template>
+
+  <template id="watch-screen">
+
+    <section>
+        <div class="container circle">
+          <div class="turning-border circle"></div>
+          <div class="dotted-border circle">
+            <slot></slot>
+          </div>
+        </div>
+    </section>
+    
+
+    <!-- CSS file-->
+    <link rel="stylesheet" href="watch-screen/watch-screen.css">          
+  </template>
+
+  
+  <template id="watch-time">
+    <section>
+      <div id="hour"></div>
+      <div class="colon">:</div>
+      <div id="minute"></div>
+      <div class="colon">:</div>      
+      <div id="second"></div>
+    </section>    
+    
+    <!-- CSS file-->
+    <link rel="stylesheet" href="watch-time/watch-time.css">   
+  </template>
+
+
+  <template id="watch-tracker">
+    <section>
+      <div id="frequency">
+        <img id="heart" src="data:image/svg+xml;base64,
+          PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTI4IDUxMi4wMDAwMiA1MTIiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48cGF0aCBkPSJtNDcxLjM4MjgxMiA0NC41NzgxMjVjLTI2LjUwMzkwNi0yOC43NDYwOTQtNjIuODcxMDkzLTQ0LjU3ODEyNS0xMDIuNDEwMTU2LTQ0LjU3ODEyNS0yOS41NTQ2ODcgMC01Ni42MjEwOTQgOS4zNDM3NS04MC40NDkyMTggMjcuNzY5NTMxLTEyLjAyMzQzOCA5LjMwMDc4MS0yMi45MTc5NjkgMjAuNjc5Njg4LTMyLjUyMzQzOCAzMy45NjA5MzgtOS42MDE1NjItMTMuMjc3MzQ0LTIwLjUtMjQuNjYwMTU3LTMyLjUyNzM0NC0zMy45NjA5MzgtMjMuODI0MjE4LTE4LjQyNTc4MS01MC44OTA2MjUtMjcuNzY5NTMxLTgwLjQ0NTMxMi0yNy43Njk1MzEtMzkuNTM5MDYzIDAtNzUuOTEwMTU2IDE1LjgzMjAzMS0xMDIuNDE0MDYzIDQ0LjU3ODEyNS0yNi4xODc1IDI4LjQxMDE1Ni00MC42MTMyODEgNjcuMjIyNjU2LTQwLjYxMzI4MSAxMDkuMjkyOTY5IDAgNDMuMzAwNzgxIDE2LjEzNjcxOSA4Mi45Mzc1IDUwLjc4MTI1IDEyNC43NDIxODcgMzAuOTkyMTg4IDM3LjM5NDUzMSA3NS41MzUxNTYgNzUuMzU1NDY5IDEyNy4xMTcxODggMTE5LjMxMjUgMTcuNjEzMjgxIDE1LjAxMTcxOSAzNy41NzgxMjQgMzIuMDI3MzQ0IDU4LjMwODU5MyA1MC4xNTIzNDQgNS40NzY1NjMgNC43OTY4NzUgMTIuNTAzOTA3IDcuNDM3NSAxOS43OTI5NjkgNy40Mzc1IDcuMjg1MTU2IDAgMTQuMzE2NDA2LTIuNjQwNjI1IDE5Ljc4NTE1Ni03LjQyOTY4NyAyMC43MzA0NjktMTguMTI4OTA3IDQwLjcwNzAzMi0zNS4xNTIzNDQgNTguMzI4MTI1LTUwLjE3MTg3NiA1MS41NzQyMTktNDMuOTQ5MjE4IDk2LjExNzE4OC04MS45MDYyNSAxMjcuMTA5Mzc1LTExOS4zMDQ2ODcgMzQuNjQ0NTMyLTQxLjgwMDc4MSA1MC43NzczNDQtODEuNDM3NSA1MC43NzczNDQtMTI0Ljc0MjE4NyAwLTQyLjA2NjQwNy0xNC40MjU3ODEtODAuODc4OTA3LTQwLjYxNzE4OC0xMDkuMjg5MDYzem0wIDAiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiIHN0eWxlPSJmaWxsOiNDMzM3MzciPjwvcGF0aD48L2c+IDwvc3ZnPg==" />
+        <div id="bpm">
+          81</div>       
+      </div>
+      <div id="calories">
+        1248 KCAL
+      </div>
+    </section>
+    
+
+    <!-- CSS file-->
+    <link rel="stylesheet" href="watch-tracker/watch-tracker.css">
+  </template>
+
+  <script src="utilities.js"></script>
+  <script src="watch-date/watch-date.js"></script>
+  <script src="watch-screen/watch-screen.js"></script>
+  <script src="watch-time/watch-time.js"></script>
+  <script src="watch-tracker/watch-tracker.js"></script>
+  <script src="watch-userinfo/watch-userinfo.js"></script>
+    
+</body>
+</html>
